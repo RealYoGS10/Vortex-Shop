@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIPS | THE ELITE HUB</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Plus+Jakarta+Sans:wght@300;500;800&display=swap');
+        
+        :root { --p: #a855f7; --s: #6366f1; --bg: #030305; }
+        
+        * { cursor: default; -webkit-tap-highlight-color: transparent; }
+        body { 
+            background: var(--bg); color: white; font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden; margin: 0;
+        }
+
+        /* $5000 Animated Background */
+        .mesh {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+            background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, transparent 50%),
+                        radial-gradient(circle at 100% 100%, #3b0764 0%, transparent 50%);
+            filter: blur(80px); opacity: 0.6;
+        }
+
+        .sync { font-family: 'Syncopate', sans-serif; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 30px;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .glass-card:hover {
+            background: rgba(168, 85, 247, 0.05);
+            border-color: rgba(168, 85, 247, 0.4);
+            transform: translateY(-10px);
+        }
+
+        .glow-text { text-shadow: 0 0 20px rgba(168, 85, 247, 0.6); }
+
+        .btn-main {
+            background: linear-gradient(90deg, #a855f7, #6366f1);
+            border-radius: 15px; position: relative; overflow: hidden;
+            transition: 0.4s;
+        }
+        .btn-main::after {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+        }
+        .btn-main:hover::after { left: 100%; }
+
+        /* Infinite Scroll for Vouches */
+        .scroller { overflow: hidden; display: flex; gap: 20px; padding: 20px 0; }
+        .scroller-inner { display: flex; gap: 20px; animation: scroll 40s linear infinite; }
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        .ugc-box {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(99, 102, 241, 0.2));
+            border: 2px solid var(--p);
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="mesh"></div>
+
+    <nav class="p-8 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="sync font-bold tracking-tighter text-xl glow-text uppercase">CHIPS</div>
+        <a href="https://discord.gg/kJ9C2pQzfr" class="text-[10px] font-black tracking-[3px] uppercase glass-card px-6 py-3">Discord</a>
+    </nav>
+
+    <header class="py-16 px-6 text-center">
+        <div class="inline-block px-4 py-1 glass-card text-[10px] font-bold text-purple-400 tracking-[4px] mb-8 uppercase border-purple-500/30">
+            Premium Experience
+        </div>
+        <h1 class="sync text-5xl md:text-8xl font-bold tracking-tighter mb-6 leading-tight">
+            THE <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">ELITE</span> MARKET
+        </h1>
+        <p class="text-gray-400 max-w-xl mx-auto text-sm md:text-lg mb-12 font-light">The industry-leading destination for high-tier Roblox assets, BedWars mastery, and OG legacy IDs.</p>
+
+        <div class="max-w-2xl mx-auto glass-card ugc-box p-10 relative overflow-hidden group">
+            <div class="relative z-10">
+                <h2 class="sync text-3xl font-bold mb-4 italic">FREE UGC</h2>
+                <p class="text-gray-300 text-sm mb-8 leading-relaxed">Unlock exclusive items instantly. Our community gets early access to all active UGC drops. Don't miss out.</p>
+                <a href="https://discord.gg/kJ9C2pQzfr" class="btn-main inline-block px-12 py-5 text-sm font-black uppercase tracking-widest">Collect Items</a>
+            </div>
+            <div class="absolute -right-10 -bottom-10 opacity-10 text-[15rem]"><i class="fa-solid fa-gift"></i></div>
+        </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 py-20">
+        <div class="glass-card p-10">
+            <h3 class="sync text-2xl font-bold mb-4">PURCHASE</h3>
+            <p class="text-gray-400 text-sm mb-8">Acquire stacked BedWars and Rivals accounts with verified security and instant delivery.</p>
+            <ul class="text-xs space-y-4 mb-10 text-gray-300">
+                <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-500"></i> Lifetime Access</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-500"></i> Full Recovery Info</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-check text-purple-500"></i> Ticket-Only Support</li>
+            </ul>
+            <a href="https://discord.gg/kJ9C2pQzfr" class="block text-center glass-card py-5 font-bold hover:bg-white hover:text-black transition uppercase text-xs tracking-widest">Enter Shop</a>
+        </div>
+
+        <div class="glass-card p-10 border-indigo-500/20">
+            <h3 class="sync text-2xl font-bold mb-4 text-indigo-400">SELL / TRADE</h3>
+            <p class="text-gray-400 text-sm mb-8">Liquidate your Roblox assets for Robux or trade up for legendary accounts. High payouts.</p>
+            <ul class="text-xs space-y-4 mb-10 text-gray-300">
+                <li class="flex items-center gap-3"><i class="fa-solid fa-bolt text-indigo-500"></i> Competitive Rates</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-bolt text-indigo-500"></i> Verified Transactions</li>
+                <li class="flex items-center gap-3"><i class="fa-solid fa-bolt text-indigo-500"></i> Instant Response</li>
+            </ul>
+            <a href="https://discord.gg/kJ9C2pQzfr" class="block text-center glass-card py-5 font-bold hover:bg-white hover:text-black transition uppercase text-xs tracking-widest">Open Ticket</a>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 mb-10 flex justify-between items-end">
+            <h2 class="sync text-xl font-bold glow-text">VOUCH FEED</h2>
+            <div class="text-[10px] font-bold text-gray-500 tracking-widest">18+ SUCCESSFUL DEALS</div>
+        </div>
+        <div class="scroller">
+            <div class="scroller-inner">
+                <div class="glass-card w-72 h-44 flex items-center justify-center italic text-gray-600">Verification Link #1</div>
+                <div class="glass-card w-72 h-44 flex items-center justify-center italic text-gray-600">Verification Link #2</div>
+                <div class="glass-card w-72 h-44 flex items-center justify-center italic text-gray-600">Verification Link #3</div>
+                <div class="glass-card w-72 h-44 flex items-center justify-center italic text-gray-600">Verification Link #4</div>
+                <div class="glass-card w-72 h-44 flex items-center justify-center italic text-gray-600">Verification Link #5</div>
+                <div class="glass-card w-72 h-44 flex items-center justify-center italic text-gray-600">Verification Link #1</div>
+                <div class="glass-card w-72 h-44 flex items-center justify-center italic text-gray-600">Verification Link #2</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-20">
+        <div>
+            <h4 class="sync text-sm font-bold mb-8 tracking-[5px] text-purple-400 uppercase">Rewards</h4>
+            <div class="space-y-4">
+                <div class="flex justify-between border-b border-white/5 pb-2 text-xs uppercase font-bold text-gray-400"><span>3 Invites</span><span>Basic</span></div>
+                <div class="flex justify-between border-b border-white/5 pb-2 text-xs uppercase font-bold text-gray-400"><span>25 Invites</span><span>Solid</span></div>
+                <div class="flex justify-between border-b border-white/5 pb-2 text-xs uppercase font-bold text-gray-400"><span>50 Invites</span><span>High-Tier</span></div>
+                <div class="flex justify-between border-b border-white/5 pb-2 text-xs uppercase font-bold text-yellow-500"><span>100 Invites</span><span>Legendary</span></div>
+            </div>
+        </div>
+        <div>
+            <h4 class="sync text-sm font-bold mb-8 tracking-[5px] text-purple-400 uppercase">Conduct</h4>
+            <div class="space-y-4 text-[10px] text-gray-500 font-medium leading-relaxed">
+                <p>01 / EXTREME RESPECT TO STAFF & CLIENTS.</p>
+                <p>02 / FRAUDULENT ACTIVITY RESULTS IN PERMANENT BLACKLIST.</p>
+                <p>03 / OFFICIAL TICKETS ONLY. NO EXTERNAL DMs.</p>
+                <p>04 / ALL SALES ARE VERIFIED VIA BLOCKCHAIN LOGS.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-32 text-center">
+        <div onclick="copyEmail()" class="cursor-pointer inline-block group">
+            <p class="text-[10px] font-bold text-gray-600 tracking-[8px] mb-4 uppercase">Inquiries</p>
+            <h5 id="email" class="text-xl md:text-3xl font-light opacity-60 group-hover:opacity-100 transition">gsgamingfxart@gmail.com</h5>
+        </div>
+        <div class="mt-24 opacity-20 text-[8px] font-black uppercase tracking-[20px]">CHIPS • MMXXVI</div>
+    </footer>
+
+    <script>
+        function copyEmail() {
+            navigator.clipboard.writeText("gsgamingfxart@gmail.com");
+            alert("SECURE CONTACT COPIED");
+        }
+    </script>
+</body>
+</html>
